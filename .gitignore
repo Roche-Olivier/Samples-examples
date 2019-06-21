@@ -1,5 +1,6 @@
 
-Electron/Example1/node_modules/*
-Electron/Example2/node_modules/*
-Electron/Example3/node_modules/*
+Electron/_1_hello_world/node_modules/*
+Electron/_2_logical_folder_structure/node_modules/*
+Electron/_3_splitting_the_main_file/node_modules/*
+Electron/_4_renderer_and_main_process/node_modules/*
 Electron/Example4/node_modules/*
