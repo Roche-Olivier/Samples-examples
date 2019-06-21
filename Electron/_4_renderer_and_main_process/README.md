@@ -1,4 +1,3 @@
-# Electron example 3  - Splitting the main file
-
+# Electron example 4  - Renderer and ipc main events
 
 [Examples wiki...](https://github.com/Roche-Olivier/Examples/wiki)
