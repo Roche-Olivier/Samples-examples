@@ -1,3 +1,4 @@
-# Electron example 2  - Logical folder structure
+# Electron example 3  - Splitting the main file
 
-[Consult the wiki for more info.](https://github.com/Roche-Olivier/Examples/wiki/Electron-example-1)
+
+[Examples wiki...](https://github.com/Roche-Olivier/Examples/wiki)
