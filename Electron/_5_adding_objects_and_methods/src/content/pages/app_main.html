@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+</head>
+
+<body>
+  <h1>Hello World! This is example 5</h1>
+  We are using node
+  <script>document.write(process.versions.node)</script>,
+  Chrome
+  <script>document.write(process.versions.chrome)</script>,
+  and Electron
+  <script>document.write(process.versions.electron)</script>.
+</body>
+
+<script>
+  require('../renderer/app_main_renderer.js')
+  const { ipcRenderer } = require('electron')
+  const _general = require('../js/document_models/_general')
+  ipcRenderer.on('opened_main_page_reply', (event, arg) => {
+    console.log(arg)
+    _general.alerts.loaded()
+  })
+</script>
+
+</html>

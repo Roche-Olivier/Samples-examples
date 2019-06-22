@@ -3,4 +3,6 @@ Electron/_1_hello_world/node_modules/*
 Electron/_2_logical_folder_structure/node_modules/*
 Electron/_3_splitting_the_main_file/node_modules/*
 Electron/_4_renderer_and_main_process/node_modules/*
-Electron/Example4/node_modules/*
+Electron/_5_adding_objects_and_methods/node_modules/*
+Electron/_6_jquery_addition_on_page/node_modules/*
+Electron/_7_using_npm_packages/node_modules/*
