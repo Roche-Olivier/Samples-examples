@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: "{{sse_namespace}}"
+  name: uc-admin-wfe
+  labels:
+    app: uc-admin-wfe
+spec:
+  replicas: {{container_replica_amount}}
+  #variabalize
+  selector:
+      matchLabels:
+        app: uc-admin-wfe
+  template:
+    metadata:
+      name: uc-admin-wfe
+      labels:
+        app: uc-admin-wfe
+        #add more to filter on this like version number , and what it does
+    spec:
+      containers:
+      - name: uc-admin-wfe
+        image: {{container_image_server}}/uc-admin-wfe:{{container_image_version}}
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: {{cpu_max}}
+            memory: {{memory_max}}
+          requests:
+            cpu: {{cpu_requests}}
+            memory: {{memory_requests}}
+        env:        
+          - name : "NAME"
+            value : "DEVELOPMENT"
+          - name: "PORT"
+            value: "8080"
+          - name: "ADMIN_API_URI"
+            value: "https://sse-uc-dev.mmih.biz/uc-admin-api/api/v1"
+          - name: "DB_DATA_API_URI"
+            value: "https://sse-uc-dev.mmih.biz/db-data-api/vitel/general/api/v1/rawdata"
