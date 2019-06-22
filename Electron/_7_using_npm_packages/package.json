@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^5.0.5",
+    "os": "^0.1.1",
     "path": "^0.12.7"
   }
 }

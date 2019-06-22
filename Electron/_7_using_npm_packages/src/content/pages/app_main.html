@@ -38,7 +38,7 @@
   ipcRenderer.on('opened_main_page_reply', (event, arg) => {
     console.log(arg)
     _general.alerts.loaded()
-    $("#fld_name").val("Roche")
+    $("#fld_name").val(process.env.USER_NAME)
   })
 </script>
 

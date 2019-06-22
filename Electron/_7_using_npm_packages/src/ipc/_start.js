@@ -2,6 +2,10 @@ const { app } = require('electron')
 
 var ipcwindows = require('./ipc_windows')
 
+const os = require('os')
+process.env.USER_NAME = os.userInfo().username.toLowerCase()
+
+
 app.on('ready', () => {
     ipcwindows._windows.load_main_window()
 })
