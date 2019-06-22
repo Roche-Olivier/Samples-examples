@@ -1,3 +1,3 @@
-# Electron example 6 - Adding jquery to your page
+# Electron example 7 - Using NPM packages
 
 [Examples wiki...](https://github.com/Roche-Olivier/Examples/wiki)

@@ -1,3 +1,3 @@
 
-const start = require('./src/ipc/_start')
-const ipc_main = require('./src/ipc/ipc_main')
+require('./src/ipc/_start')
+require('./src/ipc/ipc_main')
