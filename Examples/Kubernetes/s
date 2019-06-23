@@ -102,3 +102,7 @@ is the file to add routing to make your url your own
 
 
 A Kubernetes Ingress is a robust way to expose your services outside the cluster. It lets you consolidate your routing rules to a single resource, and gives you powerful options for configuring these rules.
+
+
+
+https://github.com/kubernetes/dashboard/
