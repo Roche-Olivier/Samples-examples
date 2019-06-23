@@ -1,0 +1,6 @@
+https://github.com/kubernetes/dashboard/wiki/Creating-sample-user
+
+
+kubectl -n kube-system get secret
+
+kubectl -n kube-system describe secret deployment-controller-token-frsqj

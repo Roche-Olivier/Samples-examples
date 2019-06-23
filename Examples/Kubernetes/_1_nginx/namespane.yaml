@@ -1,0 +1,13 @@
+https://kubernetes.io/docs/tasks/administer-cluster/namespaces-walkthrough/
+
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "name": "home-dev",
+    "labels": {
+      "name": "home-dev",
+      "description": "home-dev environment"
+    }
+  }
+}
