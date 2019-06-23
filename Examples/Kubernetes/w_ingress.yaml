@@ -1,18 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-   namespace: sse-uc-dev
-   name: sse-uc-dev-ingress
+   namespace: home-dev
+   name: home-dev-ingress
    annotations:
-     # ingress.kubernetes.io/rewrite-target: /
      ingress.kubernetes.io/proxy-body-size: "50m"
-     # nginx.org/websocket-services: vitel-email-client-socketserver
 spec:
    rules:
-   - host: "sse-uc-dev.mmih.biz"
+   - host: "api.sample.com"
      http:
       paths:
-      - path: /socketpath/
+      - path: /
         backend:
-          serviceName: vitel-email-client-socketserver
+          serviceName: hello-world-svc
           servicePort: 8080 

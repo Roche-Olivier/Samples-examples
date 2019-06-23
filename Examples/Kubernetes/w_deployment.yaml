@@ -2,42 +2,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: "{{sse_namespace}}"
-  name: uc-admin-wfe
+  namespace: "home-dev"
+  name: hello-world-svc
   labels:
-    app: uc-admin-wfe
+    app: hello-world-svc
 spec:
-  replicas: {{container_replica_amount}}
-  #variabalize
+  replicas: 1
   selector:
       matchLabels:
-        app: uc-admin-wfe
+        app: hello-world-svc
   template:
     metadata:
-      name: uc-admin-wfe
+      name: hello-world-svc
       labels:
-        app: uc-admin-wfe
-        #add more to filter on this like version number , and what it does
+        app: hello-world-svc
     spec:
       containers:
-      - name: uc-admin-wfe
-        image: {{container_image_server}}/uc-admin-wfe:{{container_image_version}}
+      - name: hello-world-svc
+        image: vad1mo/hello-world-rest
         imagePullPolicy: "IfNotPresent"
         ports:
-        - containerPort: 8080
+        - containerPort: 5050
         resources:
           limits:
-            cpu: {{cpu_max}}
-            memory: {{memory_max}}
+            cpu: 100m
+            memory: 100m
           requests:
-            cpu: {{cpu_requests}}
-            memory: {{memory_requests}}
-        env:        
-          - name : "NAME"
-            value : "DEVELOPMENT"
-          - name: "PORT"
-            value: "8080"
-          - name: "ADMIN_API_URI"
-            value: "https://sse-uc-dev.mmih.biz/uc-admin-api/api/v1"
-          - name: "DB_DATA_API_URI"
-            value: "https://sse-uc-dev.mmih.biz/db-data-api/vitel/general/api/v1/rawdata"
+            cpu: 100m
+            memory: 100m
