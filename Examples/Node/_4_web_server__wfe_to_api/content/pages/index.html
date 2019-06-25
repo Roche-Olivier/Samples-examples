@@ -1,20 +1,37 @@
 <html>
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello world</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"
+        integrity="sha256-Tjl7WVgF1hgGMgUKZZfzmxOrtoSf8qltZ9wMujjGNQk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7b797aa0d5.js"></script>
     <script type="text/javascript" src="/js/app_base.js"></script>
+    <link rel="stylesheet" href="/css/app_base.css">
 </head>
 
 <body>
-    body of the page
+    <div class="container">
+        <div class="jumbotron">
+            <i class="fas fa-thumbs-up fa-5x"></i>
+            Hello to my static page...
+        </div>
+    </div>
+
     <script>
-        var url = 'http://localhost:3101/ex1/api/v1/item/'
-        ajax_calls.get(this, callresults, url, null, null, null, null)
-        function callresults(results) {
-            console.log(results)
-            alert('done')
-        }
+        console.log("This is the console log")
     </script>
 </body>
 
