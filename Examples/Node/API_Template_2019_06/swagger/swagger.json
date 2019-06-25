@@ -1,0 +1,191 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "",
+		"version": "",
+		"title": ""
+	},
+	"host": "",
+	"basePath": "",
+	"tags": [
+		{
+			"name": "Health",
+			"description": "Ping servers etc , check basic system health."
+		},{
+			"name": "API heading",
+			"description": "The API's will fall under this list."
+		}
+	],
+	"schemes": [
+		"http","https"
+	],
+	"paths": {
+		"/items": {
+			"post": {
+				"tags": [
+					"API heading"
+				],
+				"description": "Create a new item.",
+				"parameters": [
+					{
+						"in": "body",
+						"name": "body",
+						"description": "Create a new item",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/item_model"
+						}
+					}
+				],
+				"responses": {
+					"201": {
+						"description": "Created"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"503": {
+						"description": "Service unavailable"
+					}
+				}
+			},
+			"get": {
+				"tags": [
+					"API heading"
+				],
+				"description": "Get all the items.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"404": {
+						"description": "No records"
+					},
+					"503": {
+						"description": "Service unavailable"
+					}
+				}
+			}
+		},
+		"/items/{id}": {
+			"get": {
+				"tags": [
+					"API heading"
+				],
+				"description": "Get a specific item by it's id.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id to be fetched",
+						"required": true,
+						"type": "integer",
+                        "format": "int32",
+                        "example": 1
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"404": {
+						"description": "No records"
+					},
+					"503": {
+						"description": "Service unavailable"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"API heading"
+				],
+				"description": "Update an item with the id supplied.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id of the item that needs to be edited",
+						"required": true,
+						"type": "integer",
+						"format": "int32"
+					},
+					{
+						"in": "body",
+						"name": "body",
+						"description": "Model for the update",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/item_model"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"503": {
+						"description": "Service unavailable"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"API heading"
+				],
+				"description": "Delete an item.",
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "Id of the item that needs to be removed",
+						"required": true,
+						"type": "integer",
+						"format": "int32",
+						"example": 1
+					}
+				],
+				"responses": {
+					"204": {
+						"description": "No content"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"503": {
+						"description": "Service unavailable"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"item_model": {
+			"type": "object",
+			"required": [
+				"name",
+				"description"
+			],
+			"properties": {
+				"name": {
+					"type": "string",
+					"example": "jack"
+				},
+				"description": {
+					"type": "string",
+					"example": "jack description"
+				}
+			}
+		}
+    }
+}
