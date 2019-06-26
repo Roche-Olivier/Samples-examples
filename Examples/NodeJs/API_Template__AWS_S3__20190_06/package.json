@@ -1,0 +1,23 @@
+{
+  "name": "wfe_template",
+  "version": "1.0.0",
+  "description": "WFE template site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "template",
+    "wfe",
+    "nodejs",
+    "node"
+  ],
+  "author": "Roche Olivier",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "s3": "^4.4.0",
+    "swagger-ui-express": "^4.0.6"
+  }
+}

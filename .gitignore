@@ -1,4 +1,10 @@
 
+
+Examples/NodeJs/WFE_Template__2019_06/node_modules/*
+Examples/NodeJs/API_Template__2019_06/node_modules/*
+Examples/NodeJs/API_Template__AWS_S3__20190_06/node_modules/*
+
+
 Examples/Electron/_1_hello_world/node_modules/*
 Examples/Electron/_2_logical_folder_structure/node_modules/*
 Examples/Electron/_3_splitting_the_main_file/node_modules/*
@@ -7,14 +13,4 @@ Examples/Electron/_5_adding_objects_and_methods/node_modules/*
 Examples/Electron/_6_jquery_addition_on_page/node_modules/*
 Examples/Electron/_7_using_npm_packages/node_modules/*
 
-Examples/Node/_1_installing_nodeJs/node_modules/*
-Examples/Node/_2_web_server__wfe_hello_world/node_modules/*
-Examples/Node/_3_web_server__api_hello_world/node_modules/*
-Examples/Node/_4_web_server__wfe_to_api/node_modules/*
-Examples/Node/_5_web_server__wfe_template/node_modules/*
-Examples/Node/_6_web_server__api_basic/node_modules/*
-
-
-Examples/Node/WFE_Template_2019_06/node_modules/*
-Examples/Node/API_Template_2019_06/node_modules/*
 
